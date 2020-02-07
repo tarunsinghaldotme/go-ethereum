@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  eth-classic:
+   build: .
+   ports:
+    - 8595:8545 
+    - 8596:8546
+    - 30301:30303
+    - 30301:30303/udp
+   volumes:
+    - ./data:/root/.ethereum-classic/ 
+   restart: always
+
